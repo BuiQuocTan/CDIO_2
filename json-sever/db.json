@@ -1,0 +1,55 @@
+{
+  "home": [
+    {
+      "information": {
+        "title": "Nhà ở tại liên chiểu",
+        "description": "Nhà ở tại liên chiểu",
+        "price": "0.0001",
+        "priceRent": 0,
+        "selectHome": "Land",
+        "selectBuy": "Buy",
+        "area": "120",
+        "path": "nhà-ở-tại-liên-chiểu"
+      },
+      "street": {
+        "address": "Da nang",
+        "wards": "Thanh Khê",
+        "city": "Đà Nẵng"
+      },
+      "detail": {
+        "rooms": "3",
+        "bedrooms": "2",
+        "bathrooms": "1",
+        "image": [
+          "https://firebasestorage.googleapis.com/v0/b/front-end-8a283.appspot.com/o/files%2Fneed.jpeg?alt=media&token=b0eaf3fb-f9b5-4214-8a42-dd20e71d3260"
+        ]
+      },
+      "utility": {
+        "Pool": "0",
+        "Garage": "0",
+        "Backyard": "0",
+        "Playground": "0",
+        "Laundry": "0",
+        "Gym": "0",
+        "RecreationRoom": "0",
+        "KitchenEquipment": "0",
+        "SolarPower": "1",
+        "AirConditioning": "0",
+        "Heater": "0",
+        "Ventilation": "0",
+        "WasherDryer": "0",
+        "SmokeExtractor": "0",
+        "Elevator": "0",
+        "Wifi": "0"
+      },
+      "nft_id": 0,
+      "createdAt": 1681404365153,
+      "id": 1
+    }
+  ],
+  "test": [
+    {
+      "test": "test"
+    }
+  ]
+}
