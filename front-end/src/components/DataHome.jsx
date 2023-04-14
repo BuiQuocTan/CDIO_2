@@ -79,7 +79,7 @@ function Data() {
                 id={home.id}
                 title={home.information.title}
                 type={home.information.selectHome}
-                image={home.detail.image[0]}
+                image={home.detail.image?.[0]}
                 price={home.information.price}
                 path={home.information.path}
                 deletePost={deletePost}

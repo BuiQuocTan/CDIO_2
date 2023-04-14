@@ -22,7 +22,8 @@ export const contractAddress = {
   56: '',
   5: '0x07b85258EDB07dD7f3258163f3BdCbB4333447D3',
   // 97: '0xe79A9a94d5C17fcEaE646461D00322586Cbdf590',
-  1337: "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+  1337: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  80001: "0x9402F4E2604640eb8e677114959CF77ab8e8F1E5",
 }
 
 export const supported_network = {
@@ -55,8 +56,14 @@ export const supported_network = {
     chainId: '0x7A69',
     nativeCurrency: { name: 'ETH', decimals: 18, symbol: 'ETH' },
     rpcUrls: ['http://localhost:8545']
+  },
+  80001: {
+    chainName: 'Polygon Testnet',
+    chainId: '0x13881',
+    nativeCurrency: { name: 'MATIC', decimals: 18, symbol: 'MATIC' },
+    rpcUrls: ['https://rpc-mumbai.maticvigil.com/']
   }
 }
 
 export const datafeed = 'http://localhost:5000/api'
-export const ownerAddress = '0xd61736cF7A5583E103A8efa71a1DaC9b86614929'
+export const ownerAddress = '0xf8a8f21Dd299e77CA4A4Cb9faE10898c89F6fB04'

@@ -75,7 +75,7 @@ function App() {
         />
         {!user ? <NavbarSecond /> : <Navbar />}
         <Routes>
-          {user?.email === 'ngocthuandn1998@gmail.com' ? (
+          {user?.email === 'ngocthuandn1998@gmail.com' ? ( 
             <Fragment>
               <Route path="/" element={<Admin />} />
               <Route path="/sell/:type" element={<Sell />} />
@@ -96,7 +96,7 @@ function App() {
               <Route path="/rent/:page" element={<ContentHome />} />
               <Route path="/property/:page" element={<ContentHome />} />
             </Fragment>
-          )}
+           )} 
         </Routes>
         <Footer />
       </Router>

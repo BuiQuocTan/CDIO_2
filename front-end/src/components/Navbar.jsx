@@ -140,6 +140,7 @@ function Navbar() {
             <option value="5"> GORLI </option>
             <option value="97"> BSC TESTNET </option>
             <option value="31337"> HARDHAT </option>
+            <option value="80001"> MUMBAI </option>
           </select>
           <button className="btn-wallet" onClick={!wallet ? connectWallet : disconnectWallet}>
             {wallet ? getReducedAddressString(wallet.account) : 'Connect Wallet'}

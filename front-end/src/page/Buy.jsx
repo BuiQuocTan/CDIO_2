@@ -26,7 +26,9 @@ function Buy() {
       .then(async (res) =>{
         return res.json()
       })
-      .then((receivedData) => setData(receivedData))
+      .then((receivedData) => {
+        setData(receivedData)
+      })
   }
   useEffect(() => {
     loadData()
@@ -119,7 +121,7 @@ function Buy() {
                     bedrooms={home.detail.bedrooms}
                     bathrooms={home.detail.bathrooms}
                     area={home.information.area}
-                    image={home.detail.image[0]}
+                    image={home.detail.image?.[0]}
                     type={home.information.selectBuy}
                     path={home.information.path}
                   />

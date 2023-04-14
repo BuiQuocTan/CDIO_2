@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 function Utility({ handleCheckbox, checkbox }) {
   return (
-    <div class="content-sell">
+    <div className="content-sell">
       <h1>Amenities & Features</h1>
       <p className="utility-name">Exterior details</p>
       <form className="form">

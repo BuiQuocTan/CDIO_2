@@ -43,7 +43,7 @@ function Navbar() {
           </Link>
           <div>
             <button
-              class="login"
+              className="login"
               onClick={() => {
                 setModalPage(true)
               }}

@@ -88,7 +88,7 @@ const MyHome = () => {
                   bedrooms={home.detail.bedrooms}
                   bathrooms={home.detail.bathrooms}
                   area={home.information.area}
-                  image={home.detail.image[0]}
+                  image={home.detail.image?.[0]}
                   type={home.information.selectBuy}
                   path={home.information.path}
                 />

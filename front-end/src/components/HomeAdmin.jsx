@@ -9,7 +9,7 @@ function HomeAdmin(props) {
       <div className='dataHome'>
         <p>{props.title}</p>
         <p>{props.type}</p>
-       <NavLink to={/property/+props.path} target="_blank" rel='noreferrer'><img src={props.image} alt="" /></NavLink>
+       <NavLink to={/property/+props.path} target="_blank" rel='noreferrer'><img src={props.image? props.image : ''} alt="" /></NavLink>
         <p>{props.price} &#272;</p>
         <DeleteForeverIcon onClick={()=>{props.deletePost(props.id)}} />
       </div>

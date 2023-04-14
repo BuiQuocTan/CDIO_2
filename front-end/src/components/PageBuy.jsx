@@ -21,6 +21,7 @@ import { ethers } from 'ethers'
 import { ownerAddress } from '../config'
 
 function PageBuy(props) {
+  console.log(props)
   const wallet = useSelector(selectWallet)
 
   const { page } = useParams()
@@ -29,7 +30,7 @@ function PageBuy(props) {
   const [modalShow, setModalShow] = useState(false)
   const [rentAddShow, setRentAddShow] = useState(false)
   const [rentShow, setRentShow] = useState(false)
-  const length = props.image.length
+  const length = props.image?.length
   const nextImg = () => {
     setCurrent(current === length - 1 ? 0 : current + 1)
   }
@@ -52,7 +53,6 @@ function PageBuy(props) {
 
   const handleRent = async (type, from, to) => {
     var tx
-    // const initialPrice = ethers.utils.formatEther(props.blockchainData[1]);
     const initialPrice = parseInt(props.blockchainData[1].toString())
     if (type === 'new') {
       const period = (to - from) / 24 / 60 / 60
@@ -98,7 +98,7 @@ function PageBuy(props) {
           </div>
           <h1>
             {props.price} ETH {/*&#272;*/} (
-            {parseFloat((parseFloat(ethers.utils.formatEther(props.balance)) / parseFloat(props.price)) * 100).toFixed(
+            {parseFloat((parseFloat(ethers.utils.formatEther(props.balance.toString())) / parseFloat(props.price)) * 100).toFixed(
               2,
             )}
             % Owned
@@ -142,7 +142,7 @@ function PageBuy(props) {
           </div>
           <div className="addressPage">
             <h1>Address</h1>
-            <div class="pageAddress">
+            <div className="pageAddress">
               <div className="addressChild">
                 <p>
                   <strong>Address: </strong>
@@ -169,37 +169,37 @@ function PageBuy(props) {
           <div className="detailPage">
             <h1>Detail</h1>
             <div className="pageDetail">
-              <div class="detailChild">
+              <div className="detailChild">
                 <p>
                   <strong>Type: </strong>
                   {props.kind}
                 </p>
               </div>
-              <div class="detailChild">
+              <div className="detailChild">
                 <p>
                   <strong>Price: </strong>
                   {props.price} ETH {/*&#272;*/}
                 </p>
               </div>
-              <div class="detailChild">
+              <div className="detailChild">
                 <p>
                   <strong>Area: </strong>
                   {props.area} m<sup>2</sup>
                 </p>
               </div>
-              <div class="detailChild">
+              <div className="detailChild">
                 <p>
                   <strong>Rooms: </strong>
                   {props.room}
                 </p>
               </div>
-              <div class="detailChild">
+              <div className="detailChild">
                 <p>
                   <strong>Bedrooms: </strong>
                   {props.bedroom}
                 </p>
               </div>
-              <div class="detailChild">
+              <div className="detailChild">
                 <p>
                   <strong>Bathrooms: </strong>
                   {props.bathroom}
@@ -207,12 +207,12 @@ function PageBuy(props) {
               </div>
             </div>
           </div>
-          <div class="featuredPage">
+          <div className="featuredPage">
             <h1>Featured</h1>
             <p>
               <strong>Exterior details:</strong>
             </p>
-            <div class="featuredChild">
+            <div className="featuredChild">
               {props.pool === '1' ? (
                 <div className="pageFeature">
                   <DoneIcon />
@@ -249,7 +249,7 @@ function PageBuy(props) {
             <p>
               <strong>Interior Details:</strong>
             </p>
-            <div class="featuredChild">
+            <div className="featuredChild">
               {props.laundry === '1' ? (
                 <div className="pageFeature">
                   <DoneIcon />
@@ -286,7 +286,7 @@ function PageBuy(props) {
             <p>
               <strong>Utilities:</strong>
             </p>
-            <div class="featuredChild">
+            <div className="featuredChild">
               {props.solarPower === '1' ? (
                 <div className="pageFeature">
                   <DoneIcon />
@@ -323,7 +323,7 @@ function PageBuy(props) {
             <p>
               <strong>Other appliances:</strong>
             </p>
-            <div class="featuredChild">
+            <div className="featuredChild">
               {props.washer === '1' ? (
                 <div className="pageFeature">
                   <DoneIcon />
@@ -358,7 +358,7 @@ function PageBuy(props) {
               )}
             </div>
           </div>
-          <div class="btnPage">
+          <div className="btnPage">
             {ownerAddress === wallet.account ? (
               <button
                 className="btn-pageBuy"

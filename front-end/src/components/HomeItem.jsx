@@ -10,15 +10,15 @@ function HomeItem(props) {
     <div className="homeBuy">
       <p className="type">{props.type}</p>
       {props.fform === 'buy' ? (
-        <NavLink to={/buy/ + props.path}>
+        <NavLink to={'/buy/' + props.path}>
           <div className="img-buy" style={{ backgroundImage: `url(${props.image})` }}></div>
         </NavLink>
       ) : props.fform === 'rent' ? (
-        <NavLink to={/rent/ + props.path}>
+        <NavLink to={'/rent/' + props.path}>
           <div className="img-buy" style={{ backgroundImage: `url(${props.image})` }}></div>
         </NavLink>
       ) : (
-        <NavLink to={/property/ + props.path}>
+        <NavLink to={'/property/' + props.path}>
           <div className="img-buy" style={{ backgroundImage: `url(${props.image})` }}></div>
         </NavLink>
       )}

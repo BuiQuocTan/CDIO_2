@@ -106,6 +106,7 @@ export const listLandAction = async (Web3, id) => {
 }
 
 export const createLandAction = async (Web3, uri, price) => {
+  console.log(Web3)
   const provider = new ethers.providers.Web3Provider(Web3.provider)
   const signer = provider.getSigner()
 
@@ -126,6 +127,7 @@ export const createLandAction = async (Web3, uri, price) => {
 }
 
 export const getListByUsers = async (Web3, type) => {
+  console.log(type)
   const provider = new ethers.providers.Web3Provider(Web3.provider)
   const signer = provider.getSigner()
 

@@ -78,6 +78,7 @@ function Sell() {
   //submit
   const handleSubmit = async (e) => {
     e.preventDefault()
+    console.log('Submit started')
     var sell = {
       information: {
         title: post.title,

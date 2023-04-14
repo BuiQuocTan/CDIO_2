@@ -43,6 +43,7 @@ function Home() {
       setData(temp)
     }
     if (wallet) {
+      console.log('waiting...')
       func()
     }
   }, [wallet])
